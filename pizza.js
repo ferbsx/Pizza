@@ -26,17 +26,11 @@ var create_word = function(){
   element.style.display ="block";
   element.style.top = getRandom(height)+"px";
   element.style.left = getRandom(width)+"px";
-  return element;
-
+  body.appendChild(element)
 }
-
-var create_ele = function(){
-  body.appendChild(create_word())
-}
-
 
 var rmv_word = function(){
   // TODO: remove element
 }
 
-setInterval(create_ele, 500);
+setInterval(create_word, 500);
