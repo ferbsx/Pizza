@@ -1,0 +1,27 @@
+{
+  "name": "pizza",
+  "version": "1.0.0",
+  "description": "awesome rotating pizza",
+  "main": "pizza.js",
+  "dependencies": {
+    "color": "^0.8.0",
+    "random-number": "^0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FerdousCodes/Pizza.git"
+  },
+  "keywords": [
+    "pizza"
+  ],
+  "author": "Ferdous & Julia & Finn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FerdousCodes/Pizza/issues"
+  },
+  "homepage": "https://github.com/FerdousCodes/Pizza#readme"
+}
