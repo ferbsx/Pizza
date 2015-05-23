@@ -1643,8 +1643,8 @@ void function(root){
 var rn = require('random-number');
 var colours = require('color')
 
-var height = document.body.clientHeight;
-var width = document.body.clientWidth;
+var height = document.height;
+var width = document.width;
 
 var words = ["wow", "Pizza!", "WOW", "<3", "nice!"]
 var fonts = ["Comic Sans MS"]
@@ -1666,13 +1666,13 @@ var create_word = function(){
   var text = document.createTextNode(content);         // Create a text node
   element.appendChild(text);
 
-  element.style.position ="absolute";
+  element.style.position ="fixed";
   element.style.display ="block";
   element.style.top = getRandom(height)+"px";
   element.style.left = getRandom(width)+"px";
   element.style.fontSize = getRandom(80)+"px";
-  element.style.fontFamily = getRandom(fonts.length-1);
-  element.style.color = colours({h:getRandom(100), s: 20, l:30}).toString()
+  element.style.fontFamily = fonts //getRandom(fonts);
+  element.style.color = colours({h:getRandom(100), s: 300, l: 45}).hslString()
 
   // console.log(element)
 
