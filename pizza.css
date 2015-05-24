@@ -55,14 +55,3 @@ img {
   -o-animation: rotating 10s linear infinite;
   animation: rotating 10s linear infinite;
 }
-
-/*Flexbox centering*/
-.Aligner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Aligner-item {
-  max-width: 50%;
-}

@@ -1720,6 +1720,7 @@ var create_element = function(){
   var text = document.createTextNode(content);         // Create a text node
   element.appendChild(text);
 
+  //set style and attribute for the element
   element.style.position ="fixed";
   element.style.display ="block";
   element.style.top = getRandom(height)+"px";
@@ -1727,16 +1728,25 @@ var create_element = function(){
   element.style.fontSize = getRandom(80)+"px";
   element.style.fontFamily = fonts //getRandom(fonts);
   element.style.color = colours({h:getRandom(100), s: 300, l: 45}).hslString()
+  element.setAttribute("class", "wow");
 
-  // console.log(element)
-
+  //add element to the page
   body.appendChild(element)
 }
 
-var rmv_word = function(){
-  // TODO: remove element
+var rmv_element = function(){
+  if (document.querySelector(".wow")){
+    e =document.querySelector(".wow");
+    e.parentNode.removeChild(e);
+  }
 }
 
 setInterval(create_element, 500);
+setInterval(rmv_element, 2000);
+setInterval(rmv_element, 3000);
+setInterval(rmv_element, 3500);
+setInterval(rmv_element, 4000);
+setInterval(rmv_element, 4500);
+setInterval(rmv_element, 5000);
 
 },{"color":1,"get-document-size":6,"random-number":7}]},{},[8]);
