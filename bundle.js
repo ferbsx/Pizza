@@ -1701,17 +1701,17 @@ function getRandom(max) {
   return rn(options);
 }
 
-//get document heigth cross-browser!
+// get document heigth cross-browser!
 var documentsize = require('get-document-size');
 var height = documentsize.height;
 var width = documentsize.width;
 
-// handleing colors
+// handling colors
 var colours = require('color');
 
-var body = document.querySelector("#main")
+var body = document.querySelector("#main1")
 
-var words = ["wow", "Pizza!", "WOW", "<3", "nice!"]
+var words = ["such wow", "Pizza!", "WOW", "<3", "very nice!", "amazing!", "much sexy", "Delicious!"]
 var fonts = ["Comic Sans MS"]
 
 var create_element = function(){
@@ -1720,7 +1720,7 @@ var create_element = function(){
   var text = document.createTextNode(content);         // Create a text node
   element.appendChild(text);
 
-  //set style and attribute for the element
+  // set style and attribute for the element
   element.style.position ="fixed";
   element.style.display ="block";
   element.style.top = getRandom(height)+"px";
@@ -1730,7 +1730,7 @@ var create_element = function(){
   element.style.color = colours({h:getRandom(100), s: 300, l: 45}).hslString()
   element.setAttribute("class", "wow");
 
-  //add element to the page
+  // add element to the page
   body.appendChild(element)
 }
 
@@ -1748,5 +1748,50 @@ setInterval(rmv_element, 3500);
 setInterval(rmv_element, 4000);
 setInterval(rmv_element, 4500);
 setInterval(rmv_element, 5000);
+
+
+// alternate between the pictures in a loop
+$(window).load(function() {
+
+    var InfiniteRotator =
+    {
+        init: function()
+        {
+            //initial fade-in time (in milliseconds)
+            var initialFadeIn = 1000;
+
+            //interval between items (in milliseconds)
+            var itemInterval = 5000;
+
+            //cross-fade time (in milliseconds)
+            var fadeTime = 2500;
+
+            //count number of items
+            var numberOfItems = $('.rotating-item').length;
+
+            //set current item
+            var currentItem = 0;
+
+            //show first item
+            $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
+
+            //loop through the items
+            var infiniteLoop = setInterval(function(){
+                $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
+
+                if(currentItem == numberOfItems -1){
+                    currentItem = 0;
+                }else{
+                    currentItem++;
+                }
+                $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
+
+            }, itemInterval);
+        }
+    };
+
+    InfiniteRotator.init();
+
+});
 
 },{"color":1,"get-document-size":6,"random-number":7}]},{},[8]);
