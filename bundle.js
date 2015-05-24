@@ -1594,6 +1594,56 @@ module.exports={
 	"yellowgreen": [154, 205, 50]
 }
 },{}],6:[function(require,module,exports){
+/**
+ * Dependencies
+ */
+
+var doc  = document
+var body = doc.body
+var elem = doc.documentElement
+
+/**
+ * Get the height of the document.
+ *
+ * @return {integer}
+ *
+ * @api public
+ */
+
+function getHeight() {
+  return Math.max(
+    body.scrollHeight, elem.scrollHeight,
+    body.offsetHeight, elem.offsetHeight,
+    body.clientHeight, elem.clientHeight
+  )
+}
+
+/**
+ * Get the width of the document.
+ *
+ * @return {integer}
+ *
+ * @api public
+ */
+
+function getWidth() {
+  return Math.max(
+    body.scrollWidth, elem.scrollWidth,
+    body.offsetWidth, elem.offsetWidth,
+    body.clientWidth, elem.clientWidth
+  )
+}
+
+/**
+ * Exports
+ */
+
+module.exports = {
+  height: getHeight(),
+  width: getWidth()
+}
+
+},{}],7:[function(require,module,exports){
 void function(root){
 
   function defaults(options){
@@ -1639,17 +1689,9 @@ void function(root){
   module.exports.defaults = defaults
 }(this)
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
+// Random Number generator
 var rn = require('random-number');
-var colours = require('color')
-
-var height = document.height;
-var width = document.width;
-
-var words = ["wow", "Pizza!", "WOW", "<3", "nice!"]
-var fonts = ["Comic Sans MS"]
-var body = document.querySelector("#main")
-
 function getRandom(max) {
   var options = {
     min:  0
@@ -1659,10 +1701,22 @@ function getRandom(max) {
   return rn(options);
 }
 
-var create_word = function(){
+//get document heigth cross-browser!
+var documentsize = require('get-document-size');
+var height = documentsize.height;
+var width = documentsize.width;
+
+// handleing colors
+var colours = require('color');
+
+var body = document.querySelector("#main")
+
+var words = ["wow", "Pizza!", "WOW", "<3", "nice!"]
+var fonts = ["Comic Sans MS"]
+
+var create_element = function(){
   var element = document.createElement("div");
   var content = words[getRandom(words.length-1)];
-  // console.log(content);
   var text = document.createTextNode(content);         // Create a text node
   element.appendChild(text);
 
@@ -1683,6 +1737,6 @@ var rmv_word = function(){
   // TODO: remove element
 }
 
-setInterval(create_word, 500);
+setInterval(create_element, 500);
 
-},{"color":1,"random-number":6}]},{},[7]);
+},{"color":1,"get-document-size":6,"random-number":7}]},{},[8]);

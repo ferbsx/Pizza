@@ -5,6 +5,7 @@
   "main": "pizza.js",
   "dependencies": {
     "color": "^0.8.0",
+    "get-document-size": "^1.0.0",
     "random-number": "^0.0.6"
   },
   "devDependencies": {},

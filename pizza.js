@@ -1,13 +1,5 @@
+// Random Number generator
 var rn = require('random-number');
-var colours = require('color')
-
-var height = document.height;
-var width = document.width;
-
-var words = ["wow", "Pizza!", "WOW", "<3", "nice!"]
-var fonts = ["Comic Sans MS"]
-var body = document.querySelector("#main")
-
 function getRandom(max) {
   var options = {
     min:  0
@@ -17,10 +9,22 @@ function getRandom(max) {
   return rn(options);
 }
 
-var create_word = function(){
+//get document heigth cross-browser!
+var documentsize = require('get-document-size');
+var height = documentsize.height;
+var width = documentsize.width;
+
+// handleing colors
+var colours = require('color');
+
+var body = document.querySelector("#main")
+
+var words = ["wow", "Pizza!", "WOW", "<3", "nice!"]
+var fonts = ["Comic Sans MS"]
+
+var create_element = function(){
   var element = document.createElement("div");
   var content = words[getRandom(words.length-1)];
-  // console.log(content);
   var text = document.createTextNode(content);         // Create a text node
   element.appendChild(text);
 
@@ -41,4 +45,4 @@ var rmv_word = function(){
   // TODO: remove element
 }
 
-setInterval(create_word, 500);
+setInterval(create_element, 500);
