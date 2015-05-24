@@ -1,6 +1,8 @@
 # Pizza
 :point_right: To put you in the mood :exclamation: :wink:
 
+:computer: http://ferdouscodes.github.io/Pizza/
+
 A public motivation site for whoever who needs inspiration to get some PIZZA!!!
 :heart_eyes: :pizza:
 
