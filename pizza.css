@@ -6,15 +6,13 @@ body {
   overflow: hidden;
 }
 
-
-img {
-  z-index: 0;
+#main1 {
+  /*z-index: 0;*/
   position:relative;
   /*width: 80%;*/
   max-height: 80%;
   margin-top: 40px;
 }
-
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
@@ -48,10 +46,15 @@ img {
     transform: rotate(360deg);
   }
 }
-.rotating {
-  -webkit-animation: rotating 10s linear infinite;
-  -moz-animation: rotating 10s linear infinite;
-  -ms-animation: rotating 10s linear infinite;
-  -o-animation: rotating 10s linear infinite;
-  animation: rotating 10s linear infinite;
-}
+
+.rotating-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: rotating 10s linear infinite;
+    -moz-animation: rotating 10s linear infinite;
+    -ms-animation: rotating 10s linear infinite;
+    -o-animation: rotating 10s linear infinite;
+    animation: rotating 10s linear infinite;
+  }
