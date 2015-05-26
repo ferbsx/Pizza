@@ -1594,6 +1594,21 @@ module.exports={
 	"yellowgreen": [154, 205, 50]
 }
 },{}],6:[function(require,module,exports){
+var niceArray = [
+  'such %s',
+  'wow',
+  'so %s',
+  'bes %s',
+  'much %s',
+  'plz %s',
+  'nice %s'
+];
+module.exports = function (suchInput) {
+  var soRandom = parseInt(Math.random()*niceArray.length);
+  return niceArray[soRandom].replace(/%s/g, suchInput);
+};
+
+},{}],7:[function(require,module,exports){
 /**
  * Dependencies
  */
@@ -1643,7 +1658,7 @@ module.exports = {
   width: getWidth()
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 void function(root){
 
   function defaults(options){
@@ -1689,7 +1704,7 @@ void function(root){
   module.exports.defaults = defaults
 }(this)
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 // Random Number generator
 var rn = require('random-number');
 function getRandom(max) {
@@ -1709,14 +1724,20 @@ var width = documentsize.width;
 // handling colors
 var colours = require('color');
 
+//such import
+//much doge
+var doge = require('doge');
+
 var body = document.querySelector("#main1")
 
-var words = ["such wow", "Pizza!", "WOW", "<3", "very nice!", "amazing!", "much sexy", "Delicious!"]
+// var words = ["such wow", "Pizza!", "WOW", ":winky:", "<3", "very nice!", "amazing!", "much sexy", "Delicious!"]
+var words_v2 = ["Pizza", "Delicious", "Cheese", "Nom"]
 var fonts = ["Comic Sans MS"]
 
 var create_element = function(){
   var element = document.createElement("div");
-  var content = words[getRandom(words.length-1)];
+  // var content = words[getRandom(words.length-1)];
+  var content = doge(words_v2[getRandom(words_v2.length-1)]);
   var text = document.createTextNode(content);         // Create a text node
   element.appendChild(text);
 
@@ -1794,4 +1815,4 @@ $(window).load(function() {
 
 });
 
-},{"color":1,"get-document-size":6,"random-number":7}]},{},[8]);
+},{"color":1,"doge":6,"get-document-size":7,"random-number":8}]},{},[9]);

@@ -17,14 +17,20 @@ var width = documentsize.width;
 // handling colors
 var colours = require('color');
 
+//such import
+//much doge
+var doge = require('doge');
+
 var body = document.querySelector("#main1")
 
-var words = ["such wow", "Pizza!", "WOW", ":winky:", "<3", "very nice!", "amazing!", "much sexy", "Delicious!"]
+// var words = ["such wow", "Pizza!", "WOW", ":winky:", "<3", "very nice!", "amazing!", "much sexy", "Delicious!"]
+var words_v2 = ["Pizza", "Delicious", "Cheese", "Nom"]
 var fonts = ["Comic Sans MS"]
 
 var create_element = function(){
   var element = document.createElement("div");
-  var content = words[getRandom(words.length-1)];
+  // var content = words[getRandom(words.length-1)];
+  var content = doge(words_v2[getRandom(words_v2.length-1)]);
   var text = document.createTextNode(content);         // Create a text node
   element.appendChild(text);
 
