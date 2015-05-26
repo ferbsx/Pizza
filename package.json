@@ -5,6 +5,7 @@
   "main": "pizza.js",
   "dependencies": {
     "color": "^0.8.0",
+    "doge": "^19.9.9-much.party",
     "get-document-size": "^1.0.0",
     "random-number": "^0.0.6"
   },
