@@ -6,13 +6,6 @@
 A public motivation site for whoever who needs inspiration to get some PIZZA!!!
 :heart_eyes: :pizza:
 
-## images from:
-http://www.a2zlifestyle.com/wp-content/uploads/2013/08/Healthy-and-Delicious-Pizza-at-Home.jpg
-
-
-http://i.kinja-img.com/gawker-media/image/upload/s--TppWg6h4--/17rnuvclczr2ojpg.jpg
-
-
 ## Contributing workflow
 
 Here’s how we suggest you go about proposing a change to this project:
@@ -28,3 +21,10 @@ by automatically forking the project and prompting to send a pull request, too.
 [fork]: https://help.github.com/articles/fork-a-repo/
 [branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
 [pr]: https://help.github.com/articles/using-pull-requests/
+
+
+#### Image sources:
+http://www.a2zlifestyle.com/wp-content/uploads/2013/08/Healthy-and-Delicious-Pizza-at-Home.jpg
+
+
+http://i.kinja-img.com/gawker-media/image/upload/s--TppWg6h4--/17rnuvclczr2ojpg.jpg
