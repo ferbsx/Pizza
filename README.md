@@ -25,6 +25,6 @@ by automatically forking the project and prompting to send a pull request, too.
 
 #### Image sources:
 http://www.a2zlifestyle.com/wp-content/uploads/2013/08/Healthy-and-Delicious-Pizza-at-Home.jpg
-
-
 http://i.kinja-img.com/gawker-media/image/upload/s--TppWg6h4--/17rnuvclczr2ojpg.jpg
+https://unsplash.com/photos/yDKHJxfiWDk
+https://unsplash.com/photos/f_7ZvWLP8UM
